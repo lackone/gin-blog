@@ -1,0 +1,44 @@
+Server:
+  ServiceName: gin-blog
+  RunMode: debug
+  HttpPort: 8080
+  ReadTimeout: 63
+  WriteTimeout: 63
+App:
+  DefaultPageSize: 10
+  DefaultContextTimeout: 60
+  MaxPageSize: 100
+  LogSavePath: storage/logs
+  LogFileName: app
+  LogFileExt: .log
+  UploadSavePath: storage/uploads
+  UploadServerUrl: http://127.0.0.1:8080/uploads
+  UploadImageMaxSize: 5 #MB
+  UploadImageAllowExts:
+    - .jpg
+    - .jpeg
+    - .png
+Database:
+  DBType: mysql
+  Username: root
+  Password: 123456
+  Host: 127.0.0.1:3306
+  DBName: blog
+  TablePrefix: blog_
+  Charset: utf8mb4
+  ParseTime: True
+  MaxIdleConns: 10
+  MaxOpenConns: 30
+JWT:
+  Secret: 123456
+  Issuer: blog
+  Expire: 7200
+Email:
+  Host: smtp.126.com
+  Port: 465
+  UserName: lackone@126.com
+  Password: HLVCSEKFEYAARWKW
+  IsSSL: true
+  From: lackone@126.com
+  To:
+    - 805899763@qq.com
